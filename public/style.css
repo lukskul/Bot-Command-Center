@@ -1,0 +1,182 @@
+body {
+    height: 50%;
+    width: 100vw;
+    background-image: url('/img/TheWizard.WEBP');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2%; 
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-right: 1%; 
+    margin-left: 2%; 
+    float: left; 
+}
+
+h3 {
+    color: #555; 
+    padding-left: 1%; 
+    height: 8px; 
+}
+
+.bot-image {
+    height: 70px; 
+    width: 70px; 
+    border: solid black 2px;
+    border-radius: 50%; 
+}
+
+.channel-image {
+    height: 75px; 
+    width: 70px; 
+    border: solid black 3px;
+    border-radius: 50%;
+}
+
+.bots-div {
+    width: 65%;
+}
+
+#terminal-output {
+    width: 80%;
+    background: #1e1e1e; 
+    border: 1px solid #444;
+}
+
+.bot-terminal {
+    overflow: auto;
+}
+
+.controls {
+    display: flex; 
+    gap: 2%; 
+}
+
+button {
+    cursor: pointer;
+    border-radius: 10px; /* Adjust px for more or less rounding */
+    padding: 5px;
+    color: white;
+    background-color: #333;
+    margin: 3px; 
+    margin-right: -15px;  
+}
+.bot-container {
+    gap: 20px;
+    border: black solid 5px; 
+    margin: 2%; 
+    border-radius: 10px; /* Adjust px for more or less rounding */
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.bot-terminal {
+    width: 96%;
+    border: 1px solid #333;
+    background: #000;
+    color: #0f0;
+    border-radius: 10px; 
+    height: 120px; 
+    margin-top: -1%;
+    margin-left: 1%; 
+    line-height: 1; /* Closer line height */
+    white-space: pre-wrap; /* Ensures text wraps properly */
+    word-break: break-word; /* Prevents overflow */
+    padding-top: 5px;
+}
+.input-container {
+    display: flex;
+    margin-top: 5px;
+}
+.input-container input {
+    flex: 1;
+    padding: 8px;
+    border: solid white 0px; 
+    border-radius: 10px; 
+}
+/* Fixed container, no background */
+.channel-div {
+    position: fixed;
+    top: 30%;
+    right: 25%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: none;  
+}
+
+/* Stack channels vertically */
+.channel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.channel-label {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.channel-label input[type="radio"] {
+    display: none; /* Hide the actual radio button */
+}
+
+.channel-image,
+.channel-placeholder {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glowing effect when selected */
+#channel1:checked + .channel-image {
+    box-shadow: 0 0 20px 10px #7c3aed; /* Purple glow */
+    border-radius: 50%;
+}
+
+.purple-text {
+    color: #7c3aed; 
+}
+
+#channel2:checked + .channel-image {
+    box-shadow: 0 0 20px 10px #48bb78; /* Green glow */
+    border-radius: 50%;
+}
+
+.green-text {
+    color: #48bb78; 
+}
+
+#channel3:checked + .channel-placeholder {
+    box-shadow: 0 0 20px 10px #1e40af; /* Blue glow */
+    border-radius: 50%; 
+    background-color: #1e40af;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.channel-image:hover,
+.channel-placeholder:hover {
+    transform: scale(1.05);
+}
+
+/* Selected channel name */
+#selected-channel-name {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: greenyellow;
+    font-weight: bold;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Control Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bots-div">
+         <div class="bot-container">
+            <img src="/img/bot1.png" class="bot-image"></img>
+            <h1>Bot #1</h1>
+            <div id="bot1-terminal" class="bot-terminal"></div>
+            <div class="controls">
+                <button id="start-bot1">Start</button>
+                <button id="stop-bot1">Stop</button>                 
+                <button onclick="muteBot('bot1')">Mute</button>
+                <button onclick="unmuteBot('bot1')">Unmute</button>
+                <button onclick="sendMessage('bot1')" data-target="bot1-input">Send</button>
+                <h3 class="selected-channel-name"></h3>
+            </div>
+            <div class="input-container">
+                <input id="bot1-input" type="text" placeholder="Input commands for Bot #1">
+            </div>
+        </div>
+        <div class="bot-container">  
+            <img src="/img/bot2.jpeg" class="bot-image"></img>
+            <h1>Bot #2</h1>  
+            <div id="bot2-terminal" class="bot-terminal"></div>        
+            <div class="controls">
+                <button id="start-bot2">Start</button>
+                <button id="stop-bot2">Stop</button>
+                <button onclick="muteBot('bot2')">Mute</button>
+                <button onclick="unmuteBot('bot2')">Unmute</button>
+                <button onclick="sendMessage('bot2')" data-target="bot2-input">Send</button>
+                <h3 class="selected-channel-name"></h3>
+            </div>
+            <div class="input-container">
+                <input id="bot2-input" type="text" placeholder="Imput commands for Bot #2.">
+            </div>
+        </div>
+        <div class="bot-container">
+            <img src="/img/bot3.jpeg" class="bot-image"></img>
+            <h1>Bot #3</h1>
+            <div id="bot3-terminal" class="bot-terminal"></div>
+            <div class="controls">
+                <button id="start-bot3">Start</button>
+                <button id="stop-bot3">Stop</button>
+                <button onclick="muteBot('bot3')">Mute</button>
+                <button onclick="unmuteBot('bot3')">Unmute</button>
+                <button onclick="sendMessage('bot3')" data-target="bot3-input">Send</button>
+                <h3 class="selected-channel-name"></h3>
+            </div>
+            <div class="input-container">
+                <input id="bot3-input" type="text" placeholder="Imput commands for Bot #3">
+            </div>
+        </div>
+    </div>
+    
+    <div class="channel-div">
+        <div class="channel-list">
+            <label for="channel1" class="channel-label">
+                <input type="radio" name="channel" id="channel1" value="the_wizard_12" onclick="highlightChannel(this)">
+                <img src="/img/TheWizard.WEBP" alt="The Wizard" class="channel-image">
+            </label>
+            <label for="channel2" class="channel-label">
+                <input type="radio" name="channel" id="channel2" value="luckydumpl1n" onclick="highlightChannel(this)">
+                <img src="/img/luckydumpl1n.png" alt="Lucky Dumplin" class="channel-image">
+            </label>
+            <label for="channel3" class="channel-label">
+                <input type="radio" name="channel" id="channel3" value="Channel" onclick="highlightChannel(this)">
+                <img src="/img/twitch.png" alt="Channel" class="channel-image">
+            </label>
+        </div>        
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

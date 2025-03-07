@@ -1,0 +1,21 @@
+{
+  "name": "twitchbot",
+  "version": "1.0.0",
+  "description": "Ui for Bot Management ",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "lukSkul",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "puppeteer": "^24.3.1",
+    "puppeteer-core": "^24.3.1"
+  },
+  "devDependencies": {
+    "ws": "^8.18.1"
+  }
+}
